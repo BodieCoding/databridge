@@ -47,12 +47,10 @@ This directory contains practical usage examples for the DataBridge database sch
 
 ### Basic Usage
 ```bash
-# Run the comprehensive professional example
-python professional_usage_example.py
+# Run the getting_started example
 
-# Run specific filtering demonstrations
-python filtering_example.py
-python practical_filtering_demo.py
+python getting_started.py
+
 ```
 
 ### Configuration
@@ -60,15 +58,15 @@ Each example includes database connection configuration at the top of the `main(
 
 ```python
 # Update this connection string for your database
-conn_str = 'DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;DATABASE=pocdb;UID=sa;PWD=Two3RobotDuckTag!'
+conn_str = 'DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;DATABASE=pocdb;UID=sa;PWD=DataBridge2025!'
 ```
 
 ## 📊 Example Outputs
 
 ### Schema Discovery
-- **YAML Schema**: `output/professional_schema.yaml`
-- **XML Schema**: `output/professional_schema.xml`  
-- **JSON Schema**: `output/professional_schema.json`
+- **YAML Schema**: `output/schema.yaml`
+- **XML Schema**: `output/schema.xml`  
+- **JSON Schema**: `output/schema.json`
 
 ### Visualizations
 - **Relationship Diagrams**: `output/relationships.png`
@@ -113,8 +111,6 @@ bridge.relationship_manager.visualize_dag(dag_info['dag'], 'output/graph.png')
 
 ## 📝 Notes
 
-- **No Legacy Code**: All examples use the modern DataBridge API only
-- **Professional Quality**: Examples follow best practices for production use
 - **Error Handling**: Comprehensive exception handling and logging
 - **Documentation**: Each function is well-documented with clear purposes
 - **Modularity**: Examples are structured for easy customization and extension
