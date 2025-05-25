@@ -140,7 +140,7 @@ print(f"Generated query: {query['query']}")
 3. **Configure database connection** in `config.yaml`:
    ```yaml
    source_database:
-     connection_string: "DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost;DATABASE=mydb;UID=user;PWD=pass"
+     connection_string: "DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost;DATABASE=pocdb;UID=sa;PWD=DataBridge2025!"
    ```
 
 4. **Run the demonstration**:
@@ -339,7 +339,7 @@ Customize DataBridge behavior via `config.yaml`:
 ```yaml
 # Database connections
 source_database:
-  connection_string: "DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost;DATABASE=mydb;UID=user;PWD=pass"
+  connection_string: "DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost;DATABASE=pocdb;UID=sa;PWD=DataBridge2025!"
 
 # Logging configuration
 logging:
