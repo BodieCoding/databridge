@@ -1,0 +1,39 @@
+indexes:
+  lender_customer:
+    - name: idx_lender_customer_email
+      type: NONCLUSTERED
+      columns: [email]
+    - name: idx_lender_customer_phone_number
+      type: NONCLUSTERED
+      columns: [phone_number]
+  loan_data:
+    - name: idx_loan_data_loan_amount
+      type: NONCLUSTERED
+      columns: [loan_amount]
+    - name: idx_loan_data_origination_date
+      type: NONCLUSTERED
+      columns: [origination_date]
+    - name: idx_loan_data_maturity_date
+      type: NONCLUSTERED
+      columns: [maturity_date]
+  loan_borrower_data:
+    - name: idx_loan_borrower_data_loanid
+      type: NONCLUSTERED
+      columns: [loanid]
+    - name: idx_loan_borrower_data_customer_id
+      type: NONCLUSTERED
+      columns: [customer_id]
+  loan_borrower_creditscore_data:
+    - name: idx_loan_borrower_creditscore_data_loanborrowerid
+      type: NONCLUSTERED
+      columns: [loanborrowerid]
+    - name: idx_loan_borrower_creditscore_data_credit_score
+      type: NONCLUSTERED
+      columns: [credit_score]
+  loan_comments:
+    - name: idx_loan_comments_loan_id
+      type: NONCLUSTERED
+      columns: [loan_id]
+    - name: idx_loan_comments_comment_date
+      type: NONCLUSTERED
+      columns: [comment_date]

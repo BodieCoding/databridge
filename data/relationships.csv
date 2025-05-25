@@ -1,0 +1,6 @@
+from_table,to_table,relationship_type,from_column,to_column
+loan_data,lender_customer,one-to-many,customer_id,customer_id
+loan_borrower_data,loan_data,one-to-many,loanid,loanid
+loan_borrower_data,lender_customer,one-to-many,customer_id,customer_id
+loan_borrower_creditscore_data,loan_borrower_data,one-to-many,loanborrowerid,loanborrowerid
+loan_comments,loan_data,one-to-many,loan_id,loan_id

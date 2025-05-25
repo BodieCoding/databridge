@@ -1,0 +1,3 @@
+<!-- Use this file to provide workspace-specific custom instructions to Copilot. For more details, visit https://code.visualstudio.com/docs/copilot/copilot-customization#_use-a-githubcopilotinstructionsmd-file -->
+
+This project is a modular Python utility for cloning and analyzing SQL database schemas, generating DML, and handling XML-based relationships. Use best practices for modularity, testability, and extensibility. Use pyodbc for database connections, xml.etree.ElementTree for XML parsing, and networkx for relationship analysis.

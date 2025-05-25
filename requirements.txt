@@ -1,0 +1,10 @@
+pyodbc
+networkx
+matplotlib
+pyyaml
+
+# Optional dependencies
+# For testing
+pytest
+# For database test containers
+testcontainers

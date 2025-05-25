@@ -1,0 +1,13 @@
+source_database:
+  connection_string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;DATABASE=pocdb;UID=sa;PWD=DataBridge2025!
+  schema: dbo
+  include_tables: []
+  exclude_tables: []
+target_database:
+  connection_string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;DATABASE=pocdbclone;UID=sa;PWD=DataBridge2025!
+  schema: dbo
+  include_tables: []
+  exclude_tables: []
+logging:
+  level: INFO
+  file: logs/databridge.log

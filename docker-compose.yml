@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  sql-server:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: databridge-sqlserver
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=DataBridge2025!  # Use a strong password in production
+    ports:
+      - "1433:1433"
+    volumes:
+      - ./data:/data
+    healthcheck:
+      test: /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "DataBridge2025!" -Q "SELECT 1" -b -o /dev/null
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  db-init:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    depends_on:
+      sql-server:
+        condition: service_healthy
+    volumes:
+      - ./data:/data
+    command: >
+      /bin/bash -c '
+        /opt/mssql-tools/bin/sqlcmd -S sql-server -U sa -P "DataBridge2025!" -i /data/pocdb.sql
+        echo "Database initialization completed"
+      '

@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<DataModel>
+  <Table name="loan_data">
+    <Parent name="lender_customer" relation="one-to-many">
+      <Join parent="customer_id" child="customer_id"/>
+    </Parent>
+  </Table>
+  <Table name="loan_borrower_data">
+    <Parent name="loan_data" relation="one-to-many">
+      <Join parent="loanid" child="loanid"/>
+    </Parent>
+    <Parent name="lender_customer" relation="one-to-many">
+      <Join parent="customer_id" child="customer_id"/>
+    </Parent>
+  </Table>
+  <Table name="loan_borrower_creditscore_data">
+    <Parent name="loan_borrower_data" relation="one-to-many">
+      <Join parent="loanborrowerid" child="loanborrowerid"/>
+    </Parent>
+  </Table>
+  <Table name="loan_comments">
+    <Parent name="loan_data" relation="one-to-many">
+      <Join parent="loan_id" child="loan_id"/>
+    </Parent>
+  </Table>
+</DataModel>
