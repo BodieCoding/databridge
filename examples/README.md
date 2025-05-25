@@ -1,6 +1,6 @@
 # DataBridge Examples
 
-This directory contains professional usage examples for the DataBridge database schema analysis utility. All examples demonstrate the modern, clean API without any legacy or backward compatibility code.
+This directory contains usage examples for the DataBridge  utility.
 
 ## 📁 Example Files
 
